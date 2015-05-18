@@ -1,0 +1,61 @@
+{
+  "name": "yiiframeworkco/yiiframeworkco",
+  "description": "Homepage de yiiframework.co",
+  "keywords": [
+    "yiiframework.co",
+    "yiiframeworkco",
+    "blog",
+    "PyR"
+  ],
+  "homepage": "http://www.yiiframework.co/",
+  "type": "project",
+  "license": "BSD-3-Clause",
+  "support": {
+    "issues": "https://github.com/yiiframeworkco/yiiframeworkco/issues?state=open",
+    "forum": "http://www.yiiframework.co/pr/",
+    "wiki": "http://www.yiiframework.co/wiki/",
+    "irc": "irc://irc.freenode.net/yii",
+    "source": "https://github.com/yiiframeworkco/yiiframeworkco"
+  },
+  "minimum-stability": "dev",
+  "require": {
+    "php": ">=5.4.0",
+    "yiisoft/yii2": "~2.0.0",
+    "yiisoft/yii2-bootstrap": "*",
+    "yiisoft/yii2-swiftmailer": "*",
+    "artkost/yii2-qa": "*",
+    "robregonm/yii2-auth": "*"
+  },
+  "require-dev": {
+    "yiisoft/yii2-codeception": "*",
+    "yiisoft/yii2-debug": "*",
+    "yiisoft/yii2-gii": "*",
+    "yiisoft/yii2-faker": "*"
+  },
+  "config": {
+    "process-timeout": 1800
+  },
+  "scripts": {
+    "post-create-project-cmd": [
+      "yii\\composer\\Installer::postCreateProject"
+    ]
+  },
+  "extra": {
+    "yii\\composer\\Installer::postCreateProject": {
+      "setPermission": [
+        {
+          "runtime": "0777",
+          "web/assets": "0777",
+          "yii": "0755"
+        }
+      ],
+      "generateCookieValidationKey": [
+        "config/web.php"
+      ]
+    },
+    "asset-installer-paths": {
+      "npm-asset-library": "vendor/npm",
+      "bower-asset-library": "vendor/bower"
+    }
+  }
+}
