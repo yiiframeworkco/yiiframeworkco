@@ -64,7 +64,7 @@ AppAsset::register($this);
         <div class="container">
             <p class="pull-left">
                 &copy; <a href="http://obregon.co">Obregón.co</a> <?= date('Y') ?> -
-                <?= Html::a('¿Quién está detrás de YiiFramework.co?', ['site/about']) ?>
+                <?= Html::a('¿Quién está detrás de YiiFramework.co?', ['/site/about']) ?>
             </p>
             <p class="pull-right">Desarrollado con Yii Framework v.2.0</p>
         </div>
