@@ -11,8 +11,8 @@ return [
     'noticias' => 'news/view',
     'user' => 'user/view',
     'sobre-yii' => 'site/about',
-    'logout' => 'site/logout',
-    'login' => 'site/login',
-    'signup' => 'site/signup',
+    'logout' => 'auth/default/logout',
+    'login' => 'auth/default/login',
+    'registro' => 'auth/default/signup',
     'auth' => 'site/auth',
 ];
