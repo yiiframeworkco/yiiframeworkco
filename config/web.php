@@ -41,7 +41,7 @@ $config = [
         ],
         'user' => [
             'class' => 'auth\components\User',
-            'identityClass' => 'auth\models\User', // or replace to your custom identityClass
+            'identityClass' => 'app\models\User',
             'enableAutoLogin' => true,
         ],
     ],
@@ -65,7 +65,7 @@ $config = [
         ],
         'qa' => [
             'class' => 'artkost\qa\Module',
-            'userNameFormatter' => 'getUserName',
+            'userNameFormatter' => 'getNombreUsuario',
         ],
     ],
     'params' => $params,
